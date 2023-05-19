@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>암호화</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    var target="id=admin";
+    var sha256 = CryptoJS.algo.SHA256.create();
+    sha256.update(target);
+    var result=sha256.finalize();
+    var base=CryptoJS.enc.Base64.stringify(result);
+    var hex=CryptoJS.enc.Hex.stringify(result);
+    console.log(base,hex);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
